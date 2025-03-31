@@ -2,6 +2,9 @@
 # For this project, we ignore node_modules to prevent including all installed packages.
 # Ignore node_modules to prevent tracking installed packages
 node_modules/
+frontend/node_modules/
+backend/node_modules/
+
 
 # Optional: Ignore npm or yarn debug logs
 npm-debug.log*
