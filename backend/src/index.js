@@ -8,11 +8,23 @@
 const express = require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
-
-// Import configuration settings (from config.js)
 const config = require('./config/config');
 
+// Add this block now:
+const path = require('path');
+const fs = require('fs');
+
+// Ensure the uploads folder exists
+if (!fs.existsSync('./uploads')) {
+  fs.mkdirSync('./uploads');
+}
+
+// Import configuration settings (from config.js)
+
+
 const app = express();
+
+const uploadRoutes = require('./routes/upload');
 
 // Enable Cross-Origin Resource Sharing
 app.use(cors());
@@ -26,6 +38,8 @@ const taxRoutes = require('./routes/tax');
 // Mount the routes on specific paths
 app.use('/api/auth', authRoutes);
 app.use('/api/tax', taxRoutes);
+app.use('/upload', uploadRoutes);
+
 
 // Optional: Add a root route to serve a simple HTML page
 app.get('/', (req, res) => {
@@ -79,7 +93,9 @@ app.get('/', (req, res) => {
         <nav>
           <a href="/">Home</a>
           <a href="/about">About</a>
+          <a href="/upload">Upload</a> <!-- Add this line -->
         </nav>
+
 
         <h1 class="warning-text">
           THESE VALUES ARE ESTIMATES AND SHOULD BE DOUBLE CHECKED BY AN ACCREDITED ACCOUNTANT
