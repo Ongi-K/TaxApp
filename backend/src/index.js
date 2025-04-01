@@ -35,57 +35,61 @@ app.get('/', (req, res) => {
       <head>
         <title>TaxApp</title>
         <style>
-          /* Set the entire body’s background to black, text white */
           body {
             background-color: black;
             color: white;
             margin: 0;
-            padding: 20px;
+            padding: 0;
             font-family: sans-serif;
           }
-
-          /* Center the warning text at the top */
+          nav {
+            background-color: #222;
+            padding: 15px;
+            text-align: center;
+          }
+          nav a {
+            color: white;
+            margin: 0 20px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 18px;
+          }
           .warning-text {
             text-align: center;
-            color: red; /* if you want it red */
+            color: red;
             font-weight: bold;
-            margin-bottom: 40px;
+            margin: 40px 0;
           }
-
-          /* Footer styling: dark gray background, white text, centered */
+          .content {
+            text-align: center;
+            margin-bottom: 100px;
+          }
           .creator-footer {
             background-color: #333;
             color: white;
             text-align: center;
             padding: 10px;
-            position: fixed; /* stays at the bottom even if page scrolls */
+            position: fixed;
             bottom: 0;
             width: 100%;
-          }
-
-          /* Example content styling if you need to place other elements */
-          .content {
-            text-align: center;
-            margin-bottom: 80px; /* space above the fixed footer */
           }
         </style>
       </head>
       <body>
-        <!-- Centered top warning text -->
+        <nav>
+          <a href="/">Home</a>
+          <a href="/about">About</a>
+        </nav>
+
         <h1 class="warning-text">
           THESE VALUES ARE ESTIMATES AND SHOULD BE DOUBLE CHECKED BY AN ACCREDITED ACCOUNTANT
-
-          Ongama is the best
         </h1>
 
-        <!-- Main content area -->
         <div class="content">
-          <!-- Your main page content here -->
           <h2>Tax Calculation Results</h2>
           <p>Insert your dynamic or placeholder text here...</p>
         </div>
 
-        <!-- Footer at the bottom -->
         <div class="creator-footer">
           creators: Larosa Surname and Ongama Kubheka
         </div>
@@ -93,6 +97,7 @@ app.get('/', (req, res) => {
     </html>
   `);
 });
+
 
 
 // Add an "About" page route below your existing root route
