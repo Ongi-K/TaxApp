@@ -74,6 +74,8 @@ app.get('/', (req, res) => {
         <!-- Centered top warning text -->
         <h1 class="warning-text">
           THESE VALUES ARE ESTIMATES AND SHOULD BE DOUBLE CHECKED BY AN ACCREDITED ACCOUNTANT
+
+          Ongama is the best
         </h1>
 
         <!-- Main content area -->
