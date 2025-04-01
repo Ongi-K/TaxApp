@@ -94,6 +94,40 @@ app.get('/', (req, res) => {
   `);
 });
 
+
+// Add an "About" page route below your existing root route
+app.get('/about', (req, res) => {
+  res.send(`
+    <!DOCTYPE html>
+    <html>
+      <head>
+        <title>About - TaxApp</title>
+        <style>
+          body {
+            background-color: black;
+            color: white;
+            margin: 0;
+            padding: 20px;
+            font-family: sans-serif;
+          }
+          .content {
+            text-align: center;
+            margin-top: 50px;
+          }
+        </style>
+      </head>
+      <body>
+        <div class="content">
+          <h1>About TaxApp</h1>
+          <p>TaxApp is a web-based platform designed to help you securely calculate your taxes, track multiple income types, and export your results for easy sharing.</p>
+        </div>
+      </body>
+    </html>
+  `);
+});
+
+
+
 // Start the server on the port defined in the config
 app.listen(config.port, () => {
   console.log(`Server is running on port ${config.port}`);
