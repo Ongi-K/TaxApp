@@ -98,7 +98,7 @@ app.get('/', (req, res) => {
 
 
         <h1 class="warning-text">
-          THESE VALUES ARE ESTIMATES AND SHOULD BE DOUBLE CHECKED BY AN ACCREDITED ACCOUNTANT
+          ONGAAMA IS THE BEST....THESE VALUES ARE ESTIMATES AND SHOULD BE DOUBLE CHECKED BY AN ACCREDITED ACCOUNTANT
         </h1>
 
         <div class="content">
